@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'NodeJS 18'  // Use the Node.js installation you configured
+    }
+
     environment {
         SONARQUBE_URL = 'SonarQubeServer'
     }

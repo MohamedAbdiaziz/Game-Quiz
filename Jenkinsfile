@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'Nodejs12'  // Use the Node.js installation you configured
+        nodejs 'Nodejs22'  // Use the Node.js installation you configured
     }
 
     environment {

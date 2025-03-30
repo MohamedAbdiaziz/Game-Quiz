@@ -10,10 +10,7 @@ pipeline {
             steps {
                 echo 'Building application...'
                 script {
-                    def mvnHome = tool name: 'Maven 3', type: 'hudson.tasks.Maven$MavenInstallation'
-                    // Fixing the path formatting issue on Windows
-                    def mvnPath = "${mvnHome}\\bin\\mvn"
-                    sh "\"${mvnPath}\" clean install"
+                    sh './your-build-script.sh' // Replace with your actual command to build or run the application
                 }
             }
         }

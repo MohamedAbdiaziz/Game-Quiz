@@ -9,7 +9,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building application...'
-                sh 'mvn clean install' // Adjust if using a different build tool
                 script {
                     def mvnHome = tool name: 'Maven 3', type: 'hudson.tasks.Maven$MavenInstallation'
                     sh "${mvnHome}/bin/mvn clean install"

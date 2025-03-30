@@ -10,7 +10,8 @@ pipeline {
             steps {
                 echo 'Building application...'
                 script {
-                    sh './your-build-script.sh' // Replace with your actual command to build or run the application
+                    sh 'npm install'  // Install dependencies
+                    sh 'npm run build'  // Run the build script
                 }
             }
         }
